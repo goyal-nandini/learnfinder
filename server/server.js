@@ -11,7 +11,14 @@ import SavedRouter from "./routes/saved.js";
 import SavedPathRouter from "./routes/savedPath.js";
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://learnfinder.vercel.app' 
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/api/auth', authRouter);
