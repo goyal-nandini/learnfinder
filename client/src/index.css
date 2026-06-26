@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @variant dark (&:is(dark *)); */
+/* @variant is used to apply a variant inside CSS, not to define the dark mode selector. */
