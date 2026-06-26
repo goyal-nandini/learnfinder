@@ -1,16 +1,38 @@
-# React + Vite
+# LearnFinder — AI-Powered Learning Resource Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack web application that uses AI to curate personalized learning resources and generate structured learning paths for any topic.
 
-Currently, two official plugins are available:
+🔗 Live Demo: https://learnfinder.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- 🔍 AI-powered resource search using Groq (Llama 3.3)
+- 🗺️ 4-week structured learning path generator
+- 📋 AI summarization for each resource
+- 🔐 JWT authentication (register/login)
+- 💾 Save resources and learning paths to personal dashboard
 
-## React Compiler
+## Tech Stack
+**Frontend:** React, Vite, Tailwind CSS, React Router  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB Atlas, Mongoose  
+**AI:** Groq API (Llama 3.3 70B)  
+**Auth:** JWT, bcryptjs  
+**Deployment:** Vercel (frontend), Render (backend)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run Locally
 
-## Expanding the Oxlint configuration
+**Backend**
+```bash
+cd server
+npm install
+# add .env with GROQ_API_KEY, MONGO_URI, JWT_SECRET
+node server.js
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**Frontend**
+```bash
+cd client
+npm install
+# add .env with VITE_API_URL=http://localhost:5000/api
+npm run dev
+```
