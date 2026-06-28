@@ -10,6 +10,7 @@ import Saved from './pages/Saved.jsx';
 import './index.css';
 import Path from "./pages/Path.jsx";
 import { ThemeProvider } from './context/ThemeContext.jsx';
+import Footer from "./components/Footer.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/saved" element={<Saved />} />
           <Route path="/path" element={<Path />}/>
         </Routes>
+        <Footer />
       </AuthProvider>
     </ThemeProvider>
     </BrowserRouter>
